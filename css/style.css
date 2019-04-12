@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #333;
+}
+
+.v-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.fullscreen-video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-video-wrap video {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.header-overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    background: #225470;
+    opacity: 0.85;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+}
+
+.btn {
+    background: #34b3a0;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+/* SECTIONS */
+
+#sdn {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/*---- SECTION-B----*/
+
+#section-b {
+    padding: 2em 3em 0.5em;
+    text-align: center;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li {
+    margin-bottom: 2em;
+    background: #fff;
+    color: #333;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+}
+
+/* SEC HVAD FIX */
+
+#secfix h1{
+    color: #fff;
+    text-align: center;
+}
+
+#imgfix{
+    text-align: center;
+}
+
+.flexfix{
+    width: 100%;
+}
+
+.att ul{
+    color: #fff;
+    margin: 20px;
+}
+
+#hvadfix{
+    width: 50%;
+}
+
+/* ANIMATION */
+
+#containeranimation {
+    text-align: center;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    line-height: 1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#flip {
+    height: 50px;
+    overflow: hidden;
+}
+
+#flip > div > div {
+    color: #fff;
+    padding: 4px 12px;
+    height: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+#flip div:first-child {
+    animation: show 5s linear infinite;
+}
+
+#flip div div {
+    background: #42c58a;
+}
+
+#flip div:first-child div {
+    background: #4ec7f3;
+}
+
+#flip div:last-child div {
+    background: #DC143C;
+}
+
+@keyframes show {
+    0% {
+        margin-top: -270px;
+    }
+    5% {
+        margin-top: -180px;
+    }
+    33% {
+        margin-top: -180px;
+    }
+    38% {
+        margin-top: -90px;
+    }
+    66% {
+        margin-top: -90px;
+    }
+    71% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+
+/* FOOTER */
+
+.foot {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+}
+
+.footp {
+    padding-left: 0;
+    margin: 10px;
+}
+
+.footericon {
+    width: 20px;
+    height: 20px;
+}
+
+@media(min-width: 960px) {
+
+
+    /* FOOTER */
+    .foot {
+        width: 25%;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        float: left;
+        background-color: #fff;
+    }
+
+    /* Section-b */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em))1fr;
+    }
+
+    #section-a .content-text {
+        columns: 2;
+        column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+        padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+        grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+        grid-column: span 2;
+    }
+
+    #section-b ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #section-b li {
+        width: 31%;
+    }
+    
+    #containerfix{
+    display: flex;
+        align-items: center;
+}
+
+#imgfix{
+    text-align: center;
+}
+
+.flexfix{
+    width: 100%;
+}
+
+.att ul{
+    color: #fff;
+    margin: 20px;
+}
+
+#hvadfix{
+    width: 50%;
+}
+
+}
+
+
+
+
